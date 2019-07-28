@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Login Page</title>
+</head>
+<style>
+    .shadow {
+        -webkit-box-shadow: 10px 10px 22px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 10px 10px 22px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 10px 10px 22px 0px rgba(0, 0, 0, 0.75);
+    }
+</style>
+
+<body style="background-image: url('../img/bg.jpg')">
+
+    <div style="display:flex ; justify-content:center; align-items:center ; height: 90vh;">
+        <div style="background-color:gray ; width: 600px ; height: 400px ; " class="shadow">
+            <form method="POST" action="/result" id="form" onsubmit="return check()">
+                <center>
+                    <div style="font-size:30px ; margin-top:80px;color:white">LOGIN PAGE</div>
+
+                    <div style="margin-top:20px">
+                        <input id="username" type="text" name="username" placeholder="Username"
+                            style="width:60% ; height: 30px ; font-size:16px" maxlength="20">
+                    </div>
+                    <div style="margin-top:20px">
+                        <input type="password" name="password" id="password" placeholder="Password"
+                            style="width:60% ; height: 30px ; font-size:16px"  maxlength="20">
+                    </div>
+
+                    <div style="margin-top:20px">
+                        <button type="submit"
+                            style="width:60% ; height: 40px ;font-size:20px ;background-color:#669F51 ; border:0px ; color:white ;">LOGIN</button>
+                    </div>
+                </center>
+
+
+
+            </form>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
+
+<script>
+    function check() {
+        var Username = document.getElementById("username").value;
+        var Password = document.getElementById("password").value;
+        console.log(Password)
+        if (Username == "" || Password == "") {
+            alert('กรุณากรอกข้อมูลให้ครบถ้วน')
+            return false;
+        }
+
+    }
+
+</script>
